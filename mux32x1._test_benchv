@@ -1,0 +1,92 @@
+`timescale 1ns / 1ps
+module test();
+	reg CLOCK_50;
+		reg [4:0]add;
+		reg [31:0]i0,i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,i13,i14,i15,i16,i17,i18,i19,i20,i21,i22,i23,i24,i25,i26,i27,i28,i29,i30,i31;
+		wire [31:0]out;
+		reg E;
+	d dd(E,add,i0,i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,i13,i14,i15,i16,i17,i18,i19,i20,i21,i22,i23,i24,i25,i26,i27,i28,i29,i30,i31,out);
+	
+	
+	
+	
+	initial
+	begin
+	i0=0;i1=1;i2=2;i3=3;i4=4;i5=5;i6=6;i7=7;i8=8;i9=9;i10=10;i11=11;i12=12;i13=13;i14=14;i15=15;i16=16;i17=17;i18=18;i19=19;i20=20;i21=21;i22=22;i23=23;i24=24;i25=25;i26=26;i27=27;i28=28;i29=29;i30=30;i31=31;
+	E=1;
+	
+	end
+	
+	
+
+	
+	
+	
+	initial
+	begin
+	#2;add=0;
+	#2;add=1;
+	#2;add=2;
+	#2;add=3;
+	#2;add=4;
+	#2;add=5;
+	#2;add=6;
+	#2;add=7;
+	#2;add=8;
+	#2;add=9;
+	#2;add=10;
+	#2;add=11;
+	#2;add=12;
+	#2;add=13;
+	#2;add=14;
+	#2;add=15;
+	#2;add=16;
+	#2;add=17;
+	#2;add=18;
+	#2;add=19;
+	#2;add=20;
+	#2;add=21;
+	#2;add=22;
+	#2;add=23;
+	#2;add=24;
+	#2;add=25;
+	#2;add=26;
+	#2;add=27;
+	#2;add=28;
+	#2;add=29;
+	#2;add=30;
+	#2;add=31;
+	
+	//it should read 0/0 and write 1 on r1
+	// it should read 1/0 and write 2 on r2
+	//it should only read 1/2
+
+	
+
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	end
+	
+	
+	
+	initial
+	begin
+	#1000 $stop;
+	end
+	initial
+  begin
+    $dumpfile("dump.vcd");
+    $dumpvars(1);
+  end
+	
+	
+
+endmodule
