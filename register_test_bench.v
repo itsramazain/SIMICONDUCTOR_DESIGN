@@ -38,7 +38,9 @@ module test();
 	#2;D=20;Reset=0;
 	#2;D=1000;Reset=0;
 	#2;D=100;Reset=0;
-	#2;D=1;Reset=1;E=0;
+	#2;D=1;Reset=0;E=1;
+	#2;D=20;E=1; Reset=1;
+	#2;D=1;Reset=0;E=1;
 	
 
 	
