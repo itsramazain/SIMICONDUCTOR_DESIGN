@@ -1,0 +1,71 @@
+`timescale 1ns / 1ps
+module test();
+	reg CLOCK_50;
+	reg [31:0]pc_addr;
+	wire [31:0]instruction;
+	rom ro(pc_addr,instruction);
+	parameter CLOCK_PERIOD=2;
+	
+	
+	
+	initial begin
+			CLOCK_50 <= 1'b1;
+		end // initial
+		always @ (*)
+		begin : Clock_Generator
+			#((CLOCK_PERIOD) / 2) 
+			CLOCK_50 <= ~CLOCK_50;
+		end
+	
+	
+	initial
+	begin
+	pc_addr=0;
+	end
+	
+	
+
+	
+	
+	
+	initial
+	begin
+	#2;pc_addr=1;
+	#2;pc_addr=2;
+	#2;pc_addr=3;
+	#2;pc_addr=4;
+	#2;pc_addr=5;
+	#2;pc_addr=6;
+	#2;pc_addr=7;
+	
+	
+
+	
+
+		
+
+	
+	
+	
+	
+	
+	
+	
+	
+	end
+	
+	
+	
+	initial
+	begin
+	#1000 $stop;
+	end
+	initial
+  begin
+    $dumpfile("dump.vcd");
+    $dumpvars(1);
+  end
+	
+	
+
+endmodule
